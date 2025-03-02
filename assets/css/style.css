@@ -955,4 +955,42 @@ main {
   display: none;
 }
 
+.grid-type1 .seeMore {
+  grid-column: 1 / span 6;
+  text-align: center;
+  text-decoration: underline;
+}
+
+/**/
+.socialMedia-footer{
+grid-column: 2 / span 4;
+}
+
+.store-footer {
+  grid-column: 2 / span 4;
+}
+
+.rights-footer{
+  grid-column: 2 / span 4;}
+
+  /*menu*/
+  .menuHeader {
+    margin-top: calc(var(--marginMobile));
+}
+
+.menuNav-content {
+  height: 100vh;
+  font-size: 20px;
+  text-transform: uppercase;
+  grid-column: 2 / span 5;
+  gap: calc(var(--marginMobile));
+}
+
+.menuLanguage {
+  grid-column: 1 / span 6;
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
 }
