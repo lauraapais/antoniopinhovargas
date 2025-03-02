@@ -153,6 +153,7 @@ header svg {
   margin-top: calc(var(--marginDesktop) / 2);
   position: absolute;
 }
+
 .menu {
   height: 100vh;
   width: 100%;
@@ -162,7 +163,8 @@ header svg {
   color: var(--bg-color);
   opacity: 0; /* Initially hidden with opacity */
   visibility: hidden; /* Hide menu without removing it from the DOM */
-  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; /* Smooth transitions */
+  pointer-events: none; /* Disable interaction when menu is hidden */
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
   top: 0;
   left: 0;
   overflow: hidden; /* Prevent scrolling within the menu */
@@ -171,8 +173,8 @@ header svg {
 .menu.active {
   opacity: 1; /* Fully visible */
   visibility: visible; /* Make visible for accessibility */
+  pointer-events: auto; /* Enable interaction when menu is visible */
 }
-
 
 
 body.menu-open {
@@ -323,8 +325,12 @@ body.menu-open {
 }
 
 .gridDisco .seeMore {
-    text-decoration: underline;
   grid-column: 4 / span 3;
+}
+
+.gridDisco .seeMore:hover{
+  text-decoration: underline;
+cursor:pointer;
 }
 
 /*Grid type 1*/
@@ -514,7 +520,7 @@ footer {
 }
 
 .store-footer {
-  grid-column: 3 / span 2;
+  grid-column: 4 / span 2;
 }
 
 .rights-footer {
