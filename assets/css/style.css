@@ -892,6 +892,10 @@ transition: transform 0.5s ease;
     margin-bottom: 100px;
   }
 
+  .highlightText-biografia span{
+    font-size: 22px;
+  }
+
   .landing span {
     color: var(--bg-color);
     font-size: 60px;
@@ -905,6 +909,9 @@ transition: transform 0.5s ease;
     margin-bottom: 100px;
   }
   /*grid Disco*/
+  .grid-type1 .grid-type1-mainTitle{
+    grid-column: 1 / span 6;
+  }
   .gridDisco h2 {
     grid-column: 1 / span 6;
     margin-bottom: 20px;
@@ -1071,7 +1078,7 @@ margin-top: 100px;
 }
 
 .postMarginTop{
-  margin-top:100px;
+  margin-top:50px;
 }
 
 /*2*/
