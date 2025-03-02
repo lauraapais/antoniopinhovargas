@@ -7,10 +7,11 @@
     <title>António Pinho Vargas</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/bgi2qta.css">
+    <link rel="stylesheet" href="assets/css/locomotive-scroll.css">
 </head>
 
-<body>
-    <header class="grid headerHero">
+<body data-scroll-container>
+    <header data-scroll-section class="grid headerHero">
         <div class="headerTitle">
             <h3>António Pinho Vargas</h3>
         </div>
@@ -28,7 +29,7 @@
             </svg>
         </div>
     </header>
-    <div class="menu" id="menu">
+    <div data-scroll-section class="menu" id="menu">
         <div class="grid menuHeader">
             <div class="headerTitle">
                 <h3>António Pinho Vargas</h3>
@@ -82,7 +83,7 @@
             </div>
         </div>
     </div>
-    <main>
+    <main data-scroll-section>
         <div class="landing">
             <img src="assets/data/imgs/biografia.jpg">
         </div>
@@ -118,7 +119,7 @@
             </div>
         </div>
     </main>
-    <footer>
+    <footer data-scroll-section>
         <div class="grid footerContent">
             <div class="socialMedia-footer">
                 <p>Youtube</p>
@@ -136,5 +137,6 @@
     <script src="assets/js/menu.js"></script>
     <script src="assets/js/mobileHeight.js"></script>
 
-
+    <script src="assets/js/locomotive-scroll.min.js"></script>
+    <script src="assets/js/locomotive-scroll-fix.js"></script>
 </body>

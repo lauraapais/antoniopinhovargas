@@ -7,10 +7,13 @@
     <title>António Pinho Vargas</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/bgi2qta.css">
+    <link rel="stylesheet" href="assets/css/locomotive-scroll.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
-<body>
-    <header class="grid headerHero">
+<body data-scroll-container>
+    <header data-scroll-section class="grid headerHero heroMotion">
         <div class="headerTitle">
             <h3>António Pinho Vargas</h3>
         </div>
@@ -28,7 +31,7 @@
             </svg>
         </div>
     </header>
-    <div class="menu" id="menu">
+    <div data-scroll-section class="menu" id="menu">
         <div class="grid menuHeader">
             <div class="headerTitle">
                 <h3>António Pinho Vargas</h3>
@@ -88,8 +91,8 @@
             
         </div>
     </div>
-    <main class="mainIndex">
-        <div class="landing">
+    <main data-scroll-section class="mainIndex">
+        <div class="landing heroMotion">
             <img src="assets/data/imgs/landing.jpg">
             <div class="landingTitle">
                 <span>António<br>Pinho Vargas</span>
@@ -176,7 +179,7 @@
             </div>
         </div>
     </main>
-    <footer>
+    <footer data-scroll-section>
         <div class="grid footerContent">
             <div class="socialMedia-footer">
                 <p>Youtube</p>
@@ -194,4 +197,6 @@
     <script src="assets/js/menu.js"></script>
     <script src="assets/js/mobileHeight.js"></script>
 
+    <script src="assets/js/locomotive-scroll.min.js"></script>
+    <script src="assets/js/locomotive-scroll-fix.js"></script>
 </body>

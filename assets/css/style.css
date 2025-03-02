@@ -348,9 +348,13 @@ body.menu-open {
 .grid-type1 .seeMore {
   grid-column: 4 / span 3;
   margin-top: var(--marginDesktop);
-  text-decoration: underline;
 }
 
+
+.grid-type1 .seeMore:hover {
+ text-decoration: underline;
+ cursor:pointer;
+}
 .grid-type1-item {
   grid-column: 4 / span 9;
   display: grid;
@@ -1232,4 +1236,39 @@ margin-top: 100px;
   grid-column: 2 / span 5;
   width: 100%;
 }
+}
+
+
+.heroMotion img {
+  width: 50%;
+  height: 60%;
+  animation: heroExpand 0.5s ease-in-out 1s forwards;
+}
+
+.heroMotion span, .heroMotion p, .heroMotion h3, .heroMotion svg {
+  color: black;
+  stroke: black;
+  animation: heroExpandText 0.5s ease-in-out 1s forwards;
+}
+
+@keyframes heroExpand {
+  0% {
+    width: 50%;
+    height: 60%;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@keyframes heroExpandText {
+  0% {
+    color: black;
+    stroke: black;
+  }
+  100% {
+    color: white;
+    stroke: white;
+  }
 }
