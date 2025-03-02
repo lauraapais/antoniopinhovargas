@@ -922,7 +922,7 @@ transition: transform 0.5s ease;
   }
 
   .discoItem {
-    grid-column: span 6;
+    grid-column: span 5;
   }
 
   .gridDisco .seeMore {
@@ -932,7 +932,7 @@ transition: transform 0.5s ease;
   }
 
   .gridDisco-discoPage .discoItem:nth-of-type(3n + 1) {
-    grid-column: 1 / span 6;
+    grid-column: 1 / span 5;
 }
 
 .gridDisco-discoPage{
