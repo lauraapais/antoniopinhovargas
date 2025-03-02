@@ -913,6 +913,18 @@ main {
     text-decoration: underline;
   }
 
+  .gridDisco-discoPage .discoItem:nth-of-type(3n + 1) {
+    grid-column: 1 / span 6;
+}
+
+.gridDisco-discoPage{
+  row-gap: calc(var(--marginMobile) * 2);
+}
+
+.grid-type1-margin{
+margin-top: 100px;
+}
+
   /*header*/
   .headerLanguage {
     display: none;
@@ -977,6 +989,11 @@ main {
     grid-column: 1 / span 6;
   }
 
+  footer {
+    padding: var(--marginMobile) 0;
+    margin-top: 50px;
+}
+
   /*menu*/
   .menuHeader {
     margin-top: calc(var(--marginMobile));
@@ -996,4 +1013,44 @@ main {
     gap: 0.5rem;
     margin-top: 2rem;
   }
+
+  /*Biografia*/
+  .infoPage-title {
+    grid-column: 1 / span 6;
+    margin-bottom: 20px;
+}
+
+.infoPage-text {
+  grid-column: 1 / span 6;
+  margin-bottom: 50px;
+}
+
+.infoPage-text-p{
+  margin-top: 25px;
+}
+
+#bio-image1 {
+  grid-column: 1 / span 6;
+  margin-bottom: calc(var(--marginMobile)* 2);
+}
+
+#bio-image2 {
+  grid-column: 3 / span 4;
+  align-self: flex-end;
+}
+
+.bioPages {
+  grid-column: 1 / span 6;
+  margin-top: 50px;
+}
+
+/*obras*/
+.grid-type1-mainTitle {
+  position: initial;
+  margin-bottom: 20px;
+}
+
+.postMarginTop{
+  margin-top:100px;
+}
 }
