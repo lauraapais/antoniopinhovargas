@@ -159,7 +159,7 @@ header svg {
 }
 
 .menu {
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   width: 100%;
   background-color: var(--black);
   position: fixed; /* Fix the menu to the screen */
@@ -190,7 +190,7 @@ body.menu-open {
 }
 
 .menuNav {
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   row-gap: 0;
   align-items: center;
 }
@@ -201,7 +201,7 @@ body.menu-open {
 }
 
 .menuNav-content {
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   font-size: 25px;
   text-transform: uppercase;
   grid-column: 3 / span 6;
@@ -221,7 +221,7 @@ body.menu-open {
 
 /*Index*/
 .landing {
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   overflow: hidden;
   position: relative;
   z-index: -1;
@@ -526,7 +526,7 @@ footer {
 }
 
 main {
-  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
 }
 
 /*Biografia*/
@@ -636,7 +636,7 @@ main {
 
 /*Disco-Single*/
 .discoSingle-landing {
-  height: calc(100vh - 15vh);
+  height: calc(calc(var(--vh, 1vh) * 100) - 15vh);
   padding-top: 15vh;
   display: flex;
   flex-direction: column;
@@ -983,7 +983,7 @@ main {
   }
 
   .menuNav-content {
-    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     font-size: 20px;
     text-transform: uppercase;
     grid-column: 2 / span 5;
