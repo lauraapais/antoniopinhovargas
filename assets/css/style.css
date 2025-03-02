@@ -39,7 +39,7 @@ body {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-gap: calc(var(--marginDesktop) / 2);
-  width: calc(100vw - calc(var(--marginDesktop) * 2));
+  width: calc(100% - calc(var(--marginDesktop) * 2));
   margin: 0 var(--marginDesktop);
 }
 
@@ -97,7 +97,7 @@ strong{
 
 /*Header*/
 header {
-  margin-top: var(--marginDesktop) !important;
+  margin-top: calc(var(--marginDesktop) / 2) !important;
   z-index: 1;
   font-family: "neue-haas-grotesk-display", sans-serif;
   font-weight: 400;
@@ -147,6 +147,73 @@ header svg {
   height: 1rem;
   stroke: var(--black);
 }
+
+/*Menu*/
+.menuHeader{
+  margin-top: calc(var(--marginDesktop) / 2);
+  position: absolute;
+}
+.menu {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--black);
+  position: fixed; /* Fix the menu to the screen */
+  z-index: 100;
+  color: var(--bg-color);
+  opacity: 0; /* Initially hidden with opacity */
+  visibility: hidden; /* Hide menu without removing it from the DOM */
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; /* Smooth transitions */
+  top: 0;
+  left: 0;
+  overflow: hidden; /* Prevent scrolling within the menu */
+}
+
+.menu.active {
+  opacity: 1; /* Fully visible */
+  visibility: visible; /* Make visible for accessibility */
+}
+
+
+
+body.menu-open {
+  overflow: hidden;
+}
+
+.menu svg{
+  height: 0.8rem;
+  stroke: var(--bg-color);
+}
+
+.menuNav{
+  height: 100vh;
+  row-gap: 0;
+  align-items: center;
+}
+
+.menuNav a{
+  text-decoration: none; 
+  color: var(--bg-color);
+}
+
+.menuNav-content{
+  height: 100vh;
+  font-size: 25px;
+  text-transform: uppercase;
+  grid-column: 3 / span 6;
+  display: flex;
+  gap: calc(var(--marginDesktop) / 2);
+  flex-direction: column;
+  justify-content: center;
+}
+.menuNav a{
+  transform: translate(0);
+  transition: transform 0.5s ease;
+}
+.menuNav a:hover{
+  transform: translateX(20px);
+  cursor: pointer;
+}
+
 
 /*Index*/
 .landing {
@@ -266,10 +333,6 @@ header svg {
 }
 .grid-type1 {
   margin-bottom: var(--marginDesktop);
-}
-
-.mainIndex .grid-type1 {
-  margin-bottom: calc(var(--marginDesktop) * 4);
 }
 
 .grid-type1 .seeMore {
@@ -693,18 +756,25 @@ width:100%;
   font-size: 25px;
 }
 
+.singleAuthor{
+  grid-column: 1 / span 7;
+}
+
 .singleContent{
   margin-top: 50px;
 }
 
-.singleContent div{
+.singleContent-p{
+  row-gap:0;
+}
+
+.singleContent-p{
   grid-column: 1 / span 7;
 }
 
-.singleContent p{
-  margin-bottom: 1rem;
+.singleContent-p p{
   font-family: "neue-haas-grotesk-text", sans-serif;
-
+  margin-bottom: 1rem;
 }
 
 .contentAuthor{
@@ -712,5 +782,72 @@ width:100%;
   text-align: right;
   margin-top: 1rem;
   font-family: "neue-haas-grotesk-text", sans-serif;
+}
 
+.contentMedia{
+  row-gap: var(--marginDesktop);
+  margin-top: 50px;
+}
+
+.contentMedia img:nth-child(odd) {
+  grid-column: 1 / span 7;
+  width:100%;
+}
+
+.contentMedia img:nth-child(even) {
+  grid-column: 6 / span 7;
+  width:100%;
+}
+
+.relatedPosts{
+  margin-top: 150px;
+}
+
+.relatedPosts hr{
+  grid-column: 1 / span 12;
+  border-bottom: 0.5 solid var(--black);
+  margin-bottom: calc(var(--marginDesktop) / 2);
+}
+
+.singleContent-asside{
+  grid-column: 10 / span 3;
+}
+
+.singleContent-asside p {
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  word-wrap: break-word; /* Ensures long words break to the next line */
+  word-break: break-word; /* Breaks text if necessary */
+  overflow-wrap: anywhere; /* Provides additional support for text wrapping */
+}
+
+
+/**/
+.singleTitle-type2 .h1single{
+  grid-column: 1 / span 5;
+}
+
+.singleTitle-type2 .singleSubtitle{
+  grid-column: 1 / span 5;
+  font-size: 25px;
+}
+
+.singleTitle-type2 .singleAuthor{
+  grid-column: 1 / span 5;
+  margin-top: 1rem;
+}
+
+.singleContent-type2{
+  margin-top: 1rem;
+}
+
+.singleContent-type2 .singleContent-p{
+  grid-column: 7 / span 6;
+}
+
+.contentMedia-type2  img:nth-child(odd) {
+  grid-column: 7 / span 6;  width:100%;
+}
+
+.contentMedia-type2 img:nth-child(even) {
+grid-column: 7 / span 6;  width:100%;
 }

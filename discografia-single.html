@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <header class="grid header headerIndex">
+    <header class="grid">
         <div class="headerTitle">
             <h3>António Pinho Vargas</h3>
         </div>
@@ -19,7 +19,7 @@
             <p>/</p>
             <p>EN</p>
         </div>
-        <div class="headerMenu">
+        <div class="headerMenu" id="openMenu">
             <p>MENU</p>
             <svg width="38" height="20" viewBox="0 0 38 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 1.22266H38" />
@@ -28,6 +28,60 @@
             </svg>
         </div>
     </header>
+    <div class="menu" id="menu">
+        <div class="grid menuHeader">
+            <div class="headerTitle">
+                <h3>António Pinho Vargas</h3>
+            </div>
+            <div class="headerLanguage">
+                <p>PT</p>
+                <p>/</p>
+                <p>EN</p>
+            </div>
+            <div class="headerMenu" id="closeMenu">
+                <p>FECHAR</p>
+                <svg width="40" height="14" viewBox="0 0 40 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L39 13" stroke="#EBEBEB" />
+                    <path d="M1 13L39 1" stroke="#EBEBEB" />
+                </svg>
+
+            </div>
+        </div>
+        <div class="grid menuNav">
+            <div class="menuNav-content">
+                <a href="index.html">
+                    <span>Página Inicial</span>
+                </a>
+                <a href="biografia.html">
+                    <span>Biografia</span>
+                </a>
+                <a href="galeria.html">
+                    <span>Galeria</span>
+                </a>
+                <a href="obras.html">
+                    <span>Obras</span>
+                </a>
+                <a href="obras.html">
+                    <span>Programas</span>
+                </a>
+                <a href="discografia.html">
+                    <span>Discografia</span>
+                </a>
+                <a href="criticas.html">
+                    <span>Críticas</span>
+                </a>
+                <a href="memorias.html">
+                    <span>Memórias</span>
+                </a>
+                <a href="criticas.html">
+                    <span>Notícias</span>
+                </a>
+                <a href="criticas.html">
+                    <span>Entrevistas</span>
+                </a>
+            </div>
+        </div>
+    </div>
     <main>
         <div class="discoSingle-landing">
             <div class="discoSingle-title">
@@ -173,5 +227,8 @@
             <div class="rights-footer">António Pinho Vargas ©2025<br>All Rights Reserved.</div>
         </div>
     </footer>
+
     <script src="assets/js/grid-type1.js"></script>
+    <script src="assets/js/menu.js"></script>
+
 </body>
